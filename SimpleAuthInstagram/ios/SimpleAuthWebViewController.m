@@ -26,7 +26,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.webView.frame = self.view.bounds;
+    CGFloat bottomY = CGRectGetMaxY(self.navigationController.navigationBar.frame) + [UIApplication sharedApplication].statusBarFrame.size.height;
+    
+    self.webView.frame = CGRectMake(self.view.bounds.origin.x, bottomY, self.view.bounds.size.width, self.view.bounds.size.height);
     [self.view addSubview:self.webView];
 }
 
