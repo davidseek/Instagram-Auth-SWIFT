@@ -32,7 +32,7 @@ class ViewController: UIViewController {
 
 extension ViewController {
     
-    func conntentToInstagram() {
+    @objc func conntentToInstagram() {
         
         let auth: NSMutableDictionary = ["client_id": INSTAGRAM_CLIENT_ID,
                                          SimpleAuthRedirectURIKey: INSTAGRAM_REDIRECT_URI]
